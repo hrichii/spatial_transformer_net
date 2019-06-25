@@ -22,7 +22,7 @@
 - cuDNN==7.6.0
 
 ## 入力
-MNISTの手書き文字を使用(10000img × 28pixel × 28pixel)
+MNISTの手書き文字を使用(10000images × 28pixel × 28pixel)
 
 ## 訓練
 ### 1. ゼロパディング
@@ -39,13 +39,14 @@ MNISTの手書き文字を使用(10000img × 28pixel × 28pixel)
 
 ### 4. パラメータ最適化手法 Adam
 - 学習率 0.0001
-- 不動小数点数b1 0.9
+- 浮動小数点数b1 0.9
 - 浮動小数点数b2 0.999
 - 微小量 e 1e-08
 
-## 評価
+## 評価と結果
+###学習の変遷
 
-## 結果
+###テストデータを用いた評価
 
 ## 参考文献
 [【論文】Spatial Transformer Networks (NIPS 2015) をできる限り省略せずに読んでいく](https://qiita.com/nkato_/items/125bd2e7c0af582aa32e)
