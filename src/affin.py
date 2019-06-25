@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 from numpy.random import *
-#from IPython.display import display, Image
 
 
 #def display_cv_image(image, format='.png'):
