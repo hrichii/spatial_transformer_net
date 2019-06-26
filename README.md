@@ -5,6 +5,7 @@
 - 平滑層 40x40 -> 1600
 - 全結合層(act=tanh) 1600 -> 20
 - ドロップアウト層 20 -> 20
+- 全結合層(act=tanh) 20 -> 6 New
 - STF層 40x40, 20 -> 40x40
 - 畳み込み層(n_filter=16, size=3x3, strides(2,2), act=relu, padding='same') 40x40 -> 16x40x40
 - 畳み込み層(n_filter=16, size=3x3, strides(2,2), act=relu, padding='same') 40x40 -> 16x40x40
