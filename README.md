@@ -83,9 +83,11 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 ### 5.2. テストデータを用いた評価
 <div align="center">
 <figure>
-<figcaption>図4 テストデータを入力し，STN部分から出力された予測画像</figcaption>
+<figcaption>図4 テストデータを入力しSTN部分から出力された予測画像</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/prediction.jpg" width=100%>
 </figure>
 </div>
+
 ## 参考文献
+
 [【論文】Spatial Transformer Networks (NIPS 2015) をできる限り省略せずに読んでいく](https://qiita.com/nkato_/items/125bd2e7c0af582aa32e)
