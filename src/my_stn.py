@@ -9,7 +9,7 @@ __date__    = "2019/06/26 16:08"
 
 
 #import numpy as np
-#import tensorflow as tf
+import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, Flatten, Dense, Dropout
 from spatial_transformer import transformer
 #from tensorflow.nn import softmax_cross_entropy_with_logits
@@ -19,14 +19,15 @@ from spatial_transformer import transformer
 #tfe.enable_eager_execution()
 
 
-class my_stn():
+class my_stn(tf.keras.Model):
     """
     CNN connected STN モデル
     """
-    def __init__(self,):
+    def __init__(self):
         """
         各層のフィルタを設定
         """
+        super(my_stn, self).__init__()
         self.flatten1 = Flatten(name='flatten1')
         self.fc1 = Dense(units=20, activation='tanh', name='dense1')
         self.dropout1 = Dropout(rate=0.8, name='dropout1')
@@ -52,4 +53,12 @@ class my_stn():
         feature_map = self.flatten2(feature_map)
         feature_map = self.fc3(feature_map)
         feature_map = self.fc4(feature_map)
+        return feature_map
+ 
+    def stn_img(self, batch_img):
+        feature_map = self.flatten1(batch_img)
+        feature_map = self.fc1(feature_map)
+        feature_map = self.dropout1(feature_map)
+        feature_map = self.fc2(feature_map)
+        feature_map = transformer(U=batch_img, theta=feature_map, out_size=(40,40))
         return feature_map
