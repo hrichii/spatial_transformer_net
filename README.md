@@ -15,7 +15,7 @@
 - 全結合層(act=identity) 1024 -> 10
 - 出力層 10 ->
 
-<img src="https://github.com/hrichii/spatial_transformer_net/tree/master/images/architecture.jpg" width="300">
+<img src="https://github.com/hrichii/spatial_transformer_net/blob/images/architecture.jpg" width="300">
 
 ## 2. 実行環境
 - Windows 10
