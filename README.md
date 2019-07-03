@@ -16,7 +16,10 @@
 - 出力層 10 ->
 
 <div align="center">
+<figure>
+<figcaption>STNを組み込んだ識別器の構造概要</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/architecture.jpg" width=100%>
+</figure>
 </div>
 
 ## 2. 実行環境
