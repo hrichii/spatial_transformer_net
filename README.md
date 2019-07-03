@@ -15,7 +15,7 @@
 - 全結合層(act=identity) 1024 -> 10
 - 出力層 10 ->
 
-<img src="https://github.com/hrichii/spatial_transformer_net/images/architecture.jpg" width="300">
+<img src="https://github.com/hrichii/spatial_transformer_net/tree/master/images/architecture.jpg" width="300">
 
 ## 2. 実行環境
 - Windows 10
@@ -42,7 +42,7 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 - 剪断歪み(-0.05~0.05)
 - 上下左右移動(-0.25~0.25)
 - 拡縮(0.95~1.05倍)
-<img src="https://github.com/hrichii/spatial_transformer_net/images/data_augumentation.jpg" width="300">
+<img src="https://github.com/hrichii/spatial_transformer_net/tree/master/images/data_augumentation.jpg" width="300">
 
 ### 4.3. 誤差関数
 クロスエントロピー誤差関数
@@ -61,9 +61,9 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 
 ## 5. 評価と結果
 ### 5.1. 学習の変遷
-<img src="https://github.com/hrichii/spatial_transformer_net/images/loss_history.jpg" width="300">
+<img src="https://github.com/hrichii/spatial_transformer_net/tree/master/images/loss_history.jpg" width="300">
 
 ### 5.2. テストデータを用いた評価
-<img src="https://github.com/hrichii/spatial_transformer_net/images/prediction.jpg" width="300">
+<img src="https://github.com/hrichii/spatial_transformer_net/tree/master/images/prediction.jpg" width="300">
 ## 参考文献
 [【論文】Spatial Transformer Networks (NIPS 2015) をできる限り省略せずに読んでいく](https://qiita.com/nkato_/items/125bd2e7c0af582aa32e)
