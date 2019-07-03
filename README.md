@@ -38,16 +38,16 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 
 
 
-## 4. 訓練
+## 4. 学習
 ### 4.1. ゼロパディング
 28x28のグレースケール画像の周囲にゼロパディングをし，40x40の画像に変換
 
 ### 4.2. データ拡張
 データ拡張と言っても，ここではデータ数を増やすわけではなく，手書き数字画像を歪めてより難易度を上げ，STNの空間的補正能力を際立たせる目的で全元画像それぞれに以下の条件の範囲でランダムに変換させている．
 - 回転(-30°～30°)
-- 剪断歪み(-0.05~0.05)
+- 剪断歪み(-20°～20°)
 - 上下左右移動(-0.25~0.25)
-- 拡縮(0.95~1.05倍)
+- 拡縮(0.8~1.2倍)
 <div align="center">
 <figure>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/data_augumentation.jpg" width=100%>
@@ -69,7 +69,7 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
  - バッチサイズ 500
  - クラス数 10
  - エポック数 20
- - イテレーション数 2200 = 20x55,000/500
+ - イテレーション数 2,200 = 20x55,000/500
 
 ## 5. 評価と結果
 ### 5.1. 学習の変遷
@@ -81,10 +81,20 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 </div>
 
 ### 5.2. テストデータを用いた評価
+最終的なOveall Accuracyは，0.971となった．
+図5を見て分かるようにSTN部分から出力された予測画像が一定の規則で整列しているように見える．しかし，元論文のように手書き数字画像が中央に見やすい形で変換されていない．手法内容の実装が出来ているかを再確認する必要がある．このコードの作成者である私は，損失関数の変更やfinetuningを行うことで解決するではないかと推測している．
+
+<div align="center">
+<figure>
+<img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/confusion_matrix.jpg" width=100%>
+<figcaption>図4 予測結果をまとめた混同行列</figcaption>
+</figure>
+</div>
+
 <div align="center">
 <figure>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/prediction.jpg" width=100%>
-<figcaption>図4 テストデータを入力しSTN部分から出力された予測画像</figcaption>
+<figcaption>図5 STN部分から出力された予測画像</figcaption>
 </figure>
 </div>
 
