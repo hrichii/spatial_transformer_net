@@ -17,7 +17,7 @@
 
 <div align="center">
 <figure>
-<figcaption>STNを組み込んだ識別器の構造概要</figcaption>
+<figcaption>図1 STNを組み込んだ識別器の構造概要</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/architecture.jpg" width=100%>
 </figure>
 </div>
@@ -43,13 +43,18 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 28x28のグレースケール画像の周囲にゼロパディングをし，40x40の画像に変換
 
 ### 4.2. データ拡張
+データ拡張と言っても，ここではデータ数を増やすわけではなく，手書き数字画像を歪めてより難易度を上げ，STNの空間的補正能力を際立たせる目的で全元画像それぞれに以下の条件の範囲でランダムに変換させている．
 - 回転(-30°～30°)
 - 剪断歪み(-0.05~0.05)
 - 上下左右移動(-0.25~0.25)
 - 拡縮(0.95~1.05倍)
 <div align="center">
+<figure>
+<figcaption>図2 データ拡張の条件毎の出力結果</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/data_augumentation.jpg" width=100%>
+</figure>
 </div>
+
 
 ### 4.3. 誤差関数
 クロスエントロピー誤差関数
@@ -69,12 +74,18 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 ## 5. 評価と結果
 ### 5.1. 学習の変遷
 <div align="center">
+<figure>
+<figcaption>図3 エポック毎の損失のグラフ</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/loss_history.jpg" width=100%>
+</figure>
 </div>
 
 ### 5.2. テストデータを用いた評価
 <div align="center">
+<figure>
+<figcaption>図4 テストデータを入力し，STN部分から出力された予測画像</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/prediction.jpg" width=100%>
+</figure>
 </div>
 ## 参考文献
 [【論文】Spatial Transformer Networks (NIPS 2015) をできる限り省略せずに読んでいく](https://qiita.com/nkato_/items/125bd2e7c0af582aa32e)
