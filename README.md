@@ -17,8 +17,8 @@
 
 <div align="center">
 <figure>
-<figcaption>図1 STNを組み込んだ識別器の構造概要</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/architecture.jpg" width=100%>
+<figcaption>図1 STNを組み込んだ識別器の構造概要</figcaption>
 </figure>
 </div>
 
@@ -50,8 +50,8 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 - 拡縮(0.95~1.05倍)
 <div align="center">
 <figure>
-<figcaption>図2 データ拡張の条件毎の出力結果</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/data_augumentation.jpg" width=100%>
+<figcaption>図2 データ拡張の条件毎の出力結果</figcaption>
 </figure>
 </div>
 
@@ -75,16 +75,16 @@ MNISTの手書き文字を使用(70,000images × 28pixel × 28pixel)
 ### 5.1. 学習の変遷
 <div align="center">
 <figure>
-<figcaption>図3 エポック毎の損失のグラフ</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/loss_history.jpg" width=100%>
+<figcaption>図3 エポック毎の損失のグラフ</figcaption>
 </figure>
 </div>
 
 ### 5.2. テストデータを用いた評価
 <div align="center">
 <figure>
-<figcaption>図4 テストデータを入力しSTN部分から出力された予測画像</figcaption>
 <img src="https://github.com/hrichii/spatial_transformer_net/blob/master/images/prediction.jpg" width=100%>
+<figcaption>図4 テストデータを入力しSTN部分から出力された予測画像</figcaption>
 </figure>
 </div>
 
